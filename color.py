@@ -32,29 +32,29 @@ class Color:
     def reset_color(self):  
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE)  
       
-    def pr(self, print_text):  
+    def r(self, print_text):  
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_INTENSITY)  
         print print_text  
         self.reset_color()  
           
-    def pg(self, print_text):  
+    def g(self, print_text):  
         self.set_cmd_color(FOREGROUND_GREEN | FOREGROUND_INTENSITY)  
         print print_text  
         self.reset_color()  
       
-    def pb(self, print_text):   
+    def b(self, print_text):   
         self.set_cmd_color(FOREGROUND_BLUE | FOREGROUND_INTENSITY)  
         print print_text  
         self.reset_color()  
             
-    def pr_with_blue_bg(self, print_text):  
+    def rb(self, print_text):  
         self.set_cmd_color(FOREGROUND_RED | FOREGROUND_INTENSITY| BACKGROUND_BLUE | BACKGROUND_INTENSITY)  
         print print_text  
         self.reset_color()      
   
 if __name__ == "__main__":  
-    clr = Color()  
-    clr.r('red')  
-    clr.g('green')  
-    clr.b('blue')  
-    clr.rb('background')  
+    color = Color()  
+    color.r('red')  
+    color.g('green')  
+    color.b('blue')  
+    color.rb('background')  
